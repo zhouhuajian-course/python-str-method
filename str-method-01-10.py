@@ -7,6 +7,11 @@ Python 字符串方法 01-10
 
 print("-" * 10)
 print("pytHon sTring meThoD".capitalize())
+# python 3.8+与 python 3.7- 的区别
+print("ßabc".capitalize())
+# python 3.8+ Ss
+# python 3.7- SS
+
 
 print("-" * 10)
 print("pytHon sTring meThoD".casefold())

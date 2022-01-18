@@ -1,84 +1,83 @@
 """
-Python 字符串方法 11-20
+Python 字符串方法 41-47
 
 @author  : zhouhuajian
 @version : v1.0
 """
 
 print("-" * 10)
-print("张三是个小孩，张三今年8岁。".index("张三"))
-print("张三是个小孩，张三今年8岁。".index("张三", 7, 14))
-# 找不到不报错，find找不到返回-1
-# print("张三是个小孩，张三今年8岁。".index("张三", 9))
-print("张三是个小孩，张三今年8岁。".find("张三", 9))
+print("today is sunday".startswith("today"))
+print("today is sunday".startswith("sunday"))
+print("today is sunday".startswith("sunday", 9))
+print("today is sunday".startswith("sunday", 9, 15))
+
 
 print("-" * 10)
-print("abcd1234".isalnum())
-print("abcd".isalnum())
-print("1234".isalnum())
-print("".isalnum())
-print("abcd1234!@#".isalnum())
+print("  \t\r\ntest   \t\r\n".strip())
+print("== a little girl ==".strip("="))
+print("== a little girl ==".strip("= "))
+
+
 
 print("-" * 10)
-print("abcd".isalpha())
-print("abcd1234".isalpha())
-print("".isalpha())
+print("abcdEFGH".swapcase())
+# 请注意 s.swapcase().swapcase() == s 并不一定为真值
+print("ß".swapcase())  # 两个大写的SS
+print("ß".swapcase().swapcase())  # 两个小写的ss
+print("ß".swapcase().swapcase() == "ß")
+
+
+
+
 
 print("-" * 10)
-print("abcd123!@# ".isascii())
-print("".isascii())
-print("abcd123!@# 汉字".isascii())
+print("test title method".title())
+print("teST tiTLE meTHOD".title())
+# 缩写形式与所有格的撇号
+print("they're bill's friends from the UK".title())
+
+
+
 
 print("-" * 10)
-print("1234".isdecimal())  # 普通数字
-print("１２３４".isdecimal())  # 全角数字
-print("①②③④".isdecimal())  # 圆圈数字
-print("一二三四".isdecimal())  # 汉字数字
+print("abcd".translate({
+    97: "A",
+    98: 66,
+    99: "CCC",
+    100: None
+}))
+translation_table = str.maketrans({
+    "a": "A",
+    "b": 66,
+    "c": "CCC",
+    "d": None
+})
+print(translation_table)
+print("abcd".translate(translation_table))
 
-print("ⅠⅡⅢⅣ".isdecimal())  # 罗马数字
-print("1234abcd".isdecimal())
-print("".isdecimal())
+translation_table = str.maketrans({
+    "汉": "这是汉字的汉",
+    "字": "这是汉字的字"
+})
+print(translation_table)
+print("汉字".translate(translation_table))
 
-print("-" * 10)
-print("1234".isdigit())  # 普通数字
-print("１２３４".isdigit())  # 全角数字
-print("①②③④".isdigit())  # 圆圈数字
-print("一二三四".isdigit())  # 汉字数字
-print("ⅠⅡⅢⅣ".isdigit())  # 罗马数字
-print("1234abcd".isdigit())
-print("".isdecimal())
 
-print('-' * 10)
-print("var_01".isidentifier())
-print("_test".isidentifier())
-print("0123_test".isidentifier())
-
-print('-' * 10)
-print("abcd".islower())
-# 可以加其他字符，只要所有字母是小写
-print("abcd1234".islower())
-print("abcd汉字".islower())
-print("abcdABCD".islower())
-print("1234汉字".islower())
 
 print("-" * 10)
-print("1234".isnumeric())  # 普通数字
-print("１２３４".isnumeric())  # 全角数字
-print("①②③④".isnumeric())  # 圆圈数字
-print("一二三四".isnumeric())  # 汉字数字
-print("ⅠⅡⅢⅣ".isnumeric())  # 罗马数字
-print("1234abcd".isnumeric())
-print("".isnumeric())
+print("abcdefg1234汉字".upper())
+print("abcdefg1234汉字".upper().isupper())
+# 不区分大小写
+print("1234汉字".upper().isupper())
+
+
+
 
 print("-" * 10)
-print("1234abcd汉字".isprintable())
-# ASCII码中第0～31号及第127号(共33个)是控制字符
-# 控制字符一般不可打印
-# 不可打印，可简单理解为打印机打印不出这个字符
-print("\t".isprintable())
-print("\n".isprintable())
-print("\r".isprintable())
-print("\b".isprintable())
-# 例外情况是 ASCII 空格字符 (0x20) 被视作可打印字符
-print("1234 abcd 汉字".isprintable())
+print("123".zfill(6))
+print("+123".zfill(6))
+print("-123".zfill(6))
+# 非数字字符串也可以
+# 但zfill一般用于数字字符串
+print("test".zfill(6))
 

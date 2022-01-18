@@ -34,7 +34,6 @@ print("1234".isdecimal())  # 普通数字
 print("１２３４".isdecimal())  # 全角数字
 print("①②③④".isdecimal())  # 圆圈数字
 print("一二三四".isdecimal())  # 汉字数字
-
 print("ⅠⅡⅢⅣ".isdecimal())  # 罗马数字
 print("1234abcd".isdecimal())
 print("".isdecimal())
