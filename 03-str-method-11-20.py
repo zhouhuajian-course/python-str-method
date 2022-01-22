@@ -139,8 +139,8 @@ print("".join(isdigit_list))
 print('-------------')
 # 3. 集合isdigit包含集合isdecimal，集合isdecimal是集合isdigit的真子集
 # 数字包括十进制字符和需要特殊处理的数字，如兼容性上标数字。
-print('isdigit > isdecimal')
-print(set(isdigit_list) > set(isdecimal_list))
+print('isdecimal < isdigit')
+print(set(isdecimal_list) < set(isdigit_list))
 # 4. 如果字符串中的所有字符都是数字，并且至少有一个字符，返回 True ，否则返回 False
 print("0123456789⁰¹²³⁴⁵⁶⁷⁸⁹abcdABCD".isdigit())
 print("".isdigit())
@@ -239,8 +239,8 @@ print('-------------')
 # 3. 集合isnumeric包含集合isdigit，集合isdigit是集合isnumeric的真子集
 # 集合isdigit包含集合isdecimal，集合isdecimal是集合isdigit的真子集
 # 数值字符包括数字字符，以及所有在 Unicode 中设置了数值特性属性的字符，
-print('isnumeric > isdigit > isdecimal')
-print(set(isnumeric_list) > set(isdigit_list) > set(isdecimal_list))
+print('isdecimal < isdigit < isnumeric')
+print(set(isdecimal_list) < set(isdigit_list) < set(isnumeric_list))
 # 4. 如果字符串中至少有一个字符且所有字符均为数值字符则返回 True ，否则返回 False
 print('------------')
 print("0123456789⁰¹²³⁴⁵⁶⁷⁸⁹⅐⅑⅒ⅠⅡⅢⅣabcdABCD".isnumeric())
