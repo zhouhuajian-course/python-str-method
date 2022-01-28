@@ -187,7 +187,7 @@ print(string[15:])
 # # # 2. 如果字符串以 前缀 字符串开头，返回 string[len(prefix):] 。否则，返回原始字符串的副本：
 print(string.removeprefix("Big News: "))
 # # # 3. / 表示前面的参数只能传位置参数，不能传关键字参数
-print(string.removeprefix(prefix="Breaking News: "))
+# print(string.removeprefix(prefix="Breaking News: "))
 # # # TypeError: str.removeprefix() takes no keyword arguments
 # #
 # #
