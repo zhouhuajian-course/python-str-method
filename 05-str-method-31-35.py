@@ -1,5 +1,5 @@
 """
-Python 字符串方法 31-35
+第05课 Python 字符串方法 31-35
 
 @author  : zhouhuajian
 @version : v1.0

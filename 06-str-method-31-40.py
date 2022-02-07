@@ -1,5 +1,5 @@
 """
-Python 字符串方法 36-40
+第06课 Python 字符串方法 36-40
 
 @author  : zhouhuajian
 @version : v1.0

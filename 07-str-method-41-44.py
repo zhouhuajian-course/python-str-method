@@ -1,5 +1,5 @@
 """
-Python 字符串方法 41-44
+第07课 Python 字符串方法 41-44
 
 @author  : zhouhuajian
 @version : v1.0

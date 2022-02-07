@@ -1,5 +1,5 @@
 """
-Python 字符串方法 45-47
+第08课 Python 字符串方法 45-47
 
 @author  : zhouhuajian
 @version : v1.0
