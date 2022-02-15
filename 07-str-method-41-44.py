@@ -4,7 +4,7 @@
 @author  : zhouhuajian
 @version : v1.0
 """
-# 
+
 print("--------------")
 # 1. 如果字符串以指定的 prefix 开始则返回 True，否则返回 False。
 string = "abctest"
